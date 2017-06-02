@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   # creates a helper called: static_pages_about_url
   get 'static_pages/about' 
   
+  get 'static_pages/contact'
+  
 
   root 'application#hello'
 end
