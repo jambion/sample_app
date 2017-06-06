@@ -1,15 +1,16 @@
 Rails.application.routes.draw do
-  root 'static_pages#home'
-  get 'static_pages/home'
+  get 'users/new'
 
-  get 'static_pages/help'
+  root 'static_pages#home'
+  # get 'static_pages/home'
+ 
   
-  # Tells Rails to route a GET request for the URL /static_pages/about 
-  # to the about action in the Static Pages controller. This automatically 
-  # creates a helper called: static_pages_about_url
-  get 'static_pages/about' 
-  
-  get 'static_pages/contact'
+  # routes a GET request for the URL /help to the help action in the 
+  # Static Pages controller
+  get 'help',     to: 'static_pages#help'
+  get 'about',    to: 'static_pages#about'
+  get 'contact',  to: 'static_pages#contact'
+  get 'signup',   to: 'users#new'
   
 
 
