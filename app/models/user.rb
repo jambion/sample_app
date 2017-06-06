@@ -1,6 +1,5 @@
 class User < ApplicationRecord
-<<<<<<< HEAD
-=======
+
   # The way to validate the presence of the name attribute
   before_save { self.email = email.downcase }
   validates :name, presence: true , length: { maximum: 50 }
@@ -10,5 +9,4 @@ class User < ApplicationRecord
              uniqueness: { case_sensitive: false }
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }
->>>>>>> modeling-users
 end
