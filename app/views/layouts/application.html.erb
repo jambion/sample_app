@@ -11,8 +11,13 @@
 
     
     <div class="container">
+      <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %></div>
+      <% end %>
       <%= yield %>
-      <%= render "layouts/footer" %>
+      <%= render "layouts/footer" %> 
+      <!-- Performs debug(params) only in the development environment -->
+      <%= debug(params) if Rails.env.development? %>
     </div>
     
   </body>
